@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Angular</title>
+    <link href="simple.css" rel="stylesheet" />
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.24/angular.min.js"></script>
+    <script src="simple.js"></script>
+  </head>
+  <body ng-app="SimpleApp" ng-controller="SimpleController">
+    <p>
+      Enter Github Username:
+      <input ng-model="username" ng-keyup="usernameKeypress($event)" id="username" />
+    </p>
+    <p>
+    <small>
+      Or select one of the following:
+      <a class="profile" href="#" ng-click="loadUser('mrjamesriley')">mrjamesriley</a> |
+      <a class="profile" href="#" ng-click="loadUser('dhh')">dhh</a> |
+      <a class="profile" href="#" ng-click="loadUser('jashkenas')">jashkenas</a>
+    </p>
+
+    <div id="github-profile" ng-if="profile">
+      <img src="http://gravatar.com/avatar/{{ profile.gravatar_id }}" />
+      <p>Login: {{ profile.login }} ({{ profile.id }})</p>
+      <p>Company: {{ profile.company }}</p>
+      <p>Blog: {{ profile.blog }}</p>
+    </div>
+  </body>
+</html>
+

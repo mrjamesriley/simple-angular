@@ -1,0 +1,30 @@
+* {
+  font-family: arial;
+}
+
+#github-profile {
+  border: 1px dashed black;
+  padding: 10px;
+  margin-left: 10px;
+  font-size: 12px;
+  width: 400px;
+}
+
+#github-profile img {
+  float: right;
+  border: 1px solid black;
+}
+
+input {
+  border: 1px solid rgb(141, 141, 141);
+  padding: 3px;
+  height: 25px;
+  font-size: 20px;
+  color: rgb(46, 117, 194);
+  outline: none;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+}
